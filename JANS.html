@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JANS Book Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jans.js">
+</head>
+
+<body>
+    <header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <img src="jans.png" class="logo"> </img>
+        <div class="menu" id="menu">
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+            <div class="menu-line"></div>
+        </div>
+
+        <div class="menu-overlay" id="menuOverlay"></div>
+
+        <ul class="menu-items" id="menuItems">
+            <nav class="navbar">
+                <li><a href="#home">home</a></li>
+                <li><a href="#about">about</a></li>
+                <li><a href="#product">Books</a></li>
+                <li><a href="#review">review</a></li>
+                <li><a href="#contact">contact</a></li>
+            </nav>
+        </ul>
+        <script>
+            document.getElementById("menu").addEventListener("click", function () {
+                var menuItems = document.getElementById("menuItems");
+                var menuOverlay = document.getElementById("menuOverlay");
+                var menuToggler = document.getElementById("menuToggler");
+                if (menuItems.style.display === "block") {
+                    menuItems.style.display = "none";
+                    menuOverlay.style.display = "none";
+                    menuToggler.classList.remove("active");
+                } else {
+                    menuItems.style.display = "block";
+                    menuOverlay.style.display = "block";
+                    menuToggler.classList.add("active");
+                }
+            });
+
+        </script>
+
+        <div class="icons">
+            <a href="#" class="heart">❤️</a>
+            <a href="#" class="shopping-cart">👜</a>
+            <a href="#" class="user">👨‍💼</a>
+        </div>
+
+    </header>
+    <section class="home" id="home">
+        <div class="content">
+            <h3> JANS BOOK STORE</h3>
+            <span> BOOKS, NOVELS, MAGAZINS</span>
+            <p> MAKE BOOKS YOUR FRIEND</p>
+            <a href="#" class="btn">shop now</a>
+            <img src="BookStore.jpg.jpg" width=700 class="feature-img">
+            <div class="social-links">
+                <a href="" onclick=facebook()><img class="facebook" src="facebook.png" alt=""></a>
+                <script>
+                    function facebook() {
+                        window.location.href = "https://www.facebook.com/"
+                    }
+                </script>
+                <a href="" onclick=instagram()><img class="instagram" src="instagram.jpeg" alt=""></a>
+                <script>
+                    function instagram() {
+                        window.location.href = "https://www.instagram.com/"
+                    }
+                </script>
+                <a href="" onclick=twitter()><img class="twitter" src="twitter.png" alt=""></a>
+            </div>
+            <script>
+                function twitter() {
+                    window.location.href = "https://www.twitter.com/"
+                }
+            </script>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h1 class="heading"><span>about </span>us</h1>
+        <div class="row">
+            <div class="img">
+                <img class="bestseller" src="bestseller.jpeg" width=250 height=300></img>
+                <img class="bestseller1" src="bestseller1.jpeg" width=250 height=300 alt="">
+                <img class="bestseller2" src="bestseller2.jpeg" width=250 height=300 alt="">
+                <img src="bestseller3.jpeg" width=250 height=300 alt="">
+                <h3>best sellers</h3>
+
+            </div>
+            <div class="content">
+                <h4>Why Books?</h4>
+                <p>~ Books have been a fundamental means of communication and storytelling for thousands of years. They
+                    serve a wide range of purposes and offer numerous benefits that have made them an enduring medium of
+                    human expression </p>
+                <p>~ Books serve as a source of knowledge, entertainment, personal growth, language development,
+                    cultural preservation, empathy, and creativity.</p>
+                <a href="#" class="btn">learn more</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="icons-container">
+        <div class="icons">
+            <img src="fd.png" width="180" height="230" alt="">
+            <div class="info">
+                <h3>free delivery</h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="return.png" width="180" height="230" alt="">
+            <div class="info">
+                <h3>7 days returns</h3>
+                <span>moneyback guarantee</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="offer.jpeg" width="180" height="230" alt="">
+            <div class="info">
+                <h3>offer & gifts</h3>
+                <span>on all orders</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="SP.jpeg" width="180" height="230" alt="">
+            <div class="info">
+                <h3>secure payments</h3>
+                <span>protected by paytm</span>
+            </div>
+        </div>
+
+        <div class="icons">
+            <img src="harry.jpeg" width="180" height="230" alt="">
+            <div class="info">
+                <h3>book in large ammount</h3>
+                <span>special Offers</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="product" id="product">
+        <h1 class="heading">latest <span>Books</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <span class="discount">-30%</span>
+                <div class="image">
+                    <img src="wof.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Wings on fire</h3>
+                    <div class="price">Rs.500 <span>Rs.700</span></div>
+                </div>
+            </div>
+
+            <div class="box">
+                <span class="discount">-30%</span>
+                <div class="image">
+                    <img src="Ah.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Atomic Habits</h3>
+                    <div class="price">Rs.490<span>Rs.699</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-8%</span>
+                <div class="image">
+                    <img src="Iswu.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>It Starts with us</h3>
+                    <div class="price">Rs.400 <span>Rs.600</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-5%</span>
+                <div class="image">
+                    <img src="Secret.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>The Secret</h3>
+                    <div class="price">Rs.420 <span>Rs.500</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-11%</span>
+                <div class="image">
+                    <img src="HG.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Half Girlfriend</h3>
+                    <div class="price">Rs.180 <span>Rs.300</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-7%</span>
+                <div class="image">
+                    <img src="mistakes.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Three Mistakes in my Life</h3>
+                    <div class="price"> Rs.400 <span>Rs.600</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="RDPD.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Rich Dad Poor Dad</h3>
+                    <div class="price">Rs.390 <span>Rs.550</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="Gandhi.png" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>India After Gandhi</h3>
+                    <div class="price">Rs.270<span>Rs.400</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-10%</span>
+                <div class="image">
+                    <img src="IEWS.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>It Ends With Us</h3>
+                    <div class="price">Rs.299 <span>Rs.399</span></div>
+                </div>
+            </div>
+            <div class="box">
+                <span class="discount">-6%</span>
+                <div class="image">
+                    <img src="Ikigai.jpeg" alt="">
+                    <div class="icons">
+                        <a href="#" class="Like">👍</a>
+                        <a href="#" class="cart-btn"></a>
+                        <a href="#" class="fas fa-share"></a>
+                    </div>
+                </div>
+                <div class="content">
+                    <h3>Ikigai</h3>
+                    <div class="price">Rs.500 <span>Rs.570</span></div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="review" id="review">
+        <h1 class="heading"> customer's <span>review</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                </div>
+                <p>Best delivery</p>
+                <div class="user">
+                    <img src="user.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Krishna pensalwar</h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <div class="span fas fa-quote-right"></div>
+            </div>
+            <div class="box">
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>nice quality.happy with this site</p>
+                <div class="user">
+                    <img src="user.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Vaidish Thosar</h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <div class="span fas fa-quote-right"></div>
+            </div>
+            <div class="box">
+                <div class="starts">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+
+                </div>
+                <p>Fast Delivery.</p>
+                <div class="user">
+                    <img src="user.jpeg" alt="">
+                    <div class="user-info">
+                        <h3>Sahil tambe</h3>
+                        <span>happy customer</span>
+                    </div>
+                </div>
+                <div class="span fas fa-quote-right"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h1 class="heading"> <span>contact </span>us</h1>
+        <div class="row">
+            <form action="">
+                <input type="text" placeholder="name" class="box">
+                <input type="email" placeholder="email" class="box">
+                <input type="tel" placeholder="number" class="box" pattern="[0-9]{10}" maxlength="10">
+                <textarea name="" class="box" placeholder="message" id="" cols="30" rows="10"></textarea>
+                <input type="submit" onclick="Send()" value="send message" class="btn">
+            </form>
+            <script>
+                function Send() {
+                    alert("Message Send Successfully")
+                }
+            </script>
+            <div class="image">
+                <img src="contactus.jpg.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>quick links</h3>
+                <a href="#">home</a>
+                <a href="#">about</a>
+                <a href="#">product</a>
+                <a href="#">review</a>
+                <a href="#">contact</a>
+            </div>
+
+            <div class="box">
+                <h3>extra links</h3>
+                <a href="#">my account</a>
+                <a href="#">my order</a>
+                <a href="#">my favorite</a>
+            </div>
+
+            <div class="box">
+                <h3>locations</h3>
+                <a href="#">pune</a>
+                <a href="#">mumbai</a>
+                <a href="#">nagar</a>
+                <a href="#">nashik</a>
+            </div>
+
+            <div class="box">
+                <h3>contact info</h3>
+                <a href="#">800-1001000100</a>
+                <a href="#">Jans@gmail.com</a>
+                <a href="#">pune,India-4001</a>
+                <img src="" alt="">
+            </div>
+        </div>
+
+        <div class="credit">created by <span>©️Jans pvt ltd.</span> |all rights reserved</div>
+
+    </section>
+
+</body>
+
+</html>
